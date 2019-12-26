@@ -1,0 +1,41 @@
+<div class="nav">
+<div class="logo"><a href="/"><img src="/images/logo.png" alt=""></a></div>
+<form class="form-inline" name="tagForm" id="choice-form" method='post' action="/sets">
+    <div class="form-group mb-2">
+    <div class="form-group mx-sm-3 mb-2">
+        <label for="inputChoice" class="sr-only">Tag</label>
+        <input type="text" class="form-control" id="inputChoice" name="tag" placeholder="Enter a tag" required>
+    </div>
+    <button type="submit" class="btn btn-primary mb-2" id="inputChoiceBtn">Show</button>
+    </div>
+
+</form>
+
+
+
+
+<form class="form-inline" name="cityForm" id="choice-form" method='post' action="/sets/">
+    <div class="form-group mb-2">
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="inputChoice" class="sr-only">Tag</label>
+            <input type="text" class="form-control" id="inputChoice" name="city" placeholder="Enter a city" required>
+        </div>
+        <button type="submit" class="btn btn-primary mb-2" id="inputChoiceBtn">Show</button>
+    </div>
+</form>
+
+
+
+<button class="btn btn-outline-info btn-block" id="getRecentBtn">Get recent photos</button>
+<button class="btn btn-outline-info btn-block">Get recent photos</button>
+<button class="btn btn-outline-info btn-block">Get recent photos</button>
+<button class="btn btn-outline-info btn-block">Get recent photos</button>
+<button class="btn btn-outline-info btn-block">Get recent photos</button>
+<button class="btn btn-outline-info btn-block">Get recent photos</button>
+
+</div>
+<div class="container">
+{{#each pictures}}
+    <div class="square-img"><img src="{{this.url}}" alt="" id="{{this.id}}"></div>
+{{/each}}
+</div>

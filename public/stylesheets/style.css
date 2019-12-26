@@ -1,0 +1,55 @@
+body {
+  padding: 10px;
+  margin-top: 10px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: white;
+  background-color: #1a1a1a;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 0;
+}
+
+.square-img {
+  margin: 2px;
+}
+
+main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+#choice-form,
+#tag-form {
+  align-items: flex-start;
+}
+
+#tag-form {
+  align-self: flex-start;
+}
+
+.logo {
+  align-items: flex-start;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.btn {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
