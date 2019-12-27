@@ -4,14 +4,13 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const hbs = require('hbs');
-const paginateHelper = require('express-handlebars-paginate');
+
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const setsRouter = require('./routes/sets');
 
 const app = express();
 
-hbs.handlebars.registerHelper('paginateHelper', paginateHelper.createPagination);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
