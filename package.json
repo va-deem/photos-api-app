@@ -11,7 +11,6 @@
     "dotenv": "^8.2.0",
     "express": "~4.16.1",
     "express-handlebars": "^3.1.0",
-    "express-handlebars-paginate": "^1.0.3",
     "flickr-sdk": "^3.9.0",
     "hbs": "^4.0.6",
     "http-errors": "~1.6.3",

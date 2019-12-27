@@ -1,32 +1,32 @@
 <div class="info-container">
-<div class="img-big">
-    <img src="https://farm{{result.farm}}.staticflickr.com/{{result.server}}/{{result.id}}_{{result.secret}}_z.jpg"
-         alt="">
-</div>
-<div class="img-info-list">
-    <ul class="list-info">
-        {{#if result.owner.realname}}
-            <li class="list-item">Owner's real name: {{result.owner.realname}}</li>
-        {{/if}}
-        <li class="list-item">Owner's username: {{result.owner.username}}</li>
-        <li class="list-item">Date taken: {{result.dates.taken}}</li>
-        {{#if result.location.country}}
-            <li class="list-item">
-                Location: {{result.location.country._content}} {{result.location.region._content}} {{result.location.locality._content}}</li>
-        {{/if}}
-        {{#if result.comments.content}}
-            <li class="list-item">Comments: {{result.comments.content}}</li>
-        {{/if}}
-        {{#if result.title._content}}
-        <li class="list-item">Title: {{result.title._content}}</li>
-        {{/if}}
-        <li class="list-item">URL: <a href="{{result.urls.url.0._content}}">{{result.urls.url.0._content}}</a></li>
-        {{#if result.tags.tag}}
-            <li class="list-item">Таgs: {{# each result.tags.tag }} {{this._content}} {{/each}}</li>
-        {{/if}}
-        {{#if result.description._content}}
-            <li class="list-item">Description: {{{result.description._content}}}</li>
-        {{/if}}
-    </ul>
-</div>
+    <div class="img-big">
+        <img src="https://farm{{result.farm}}.staticflickr.com/{{result.server}}/{{result.id}}_{{result.secret}}_z.jpg"
+             alt="">
+    </div>
+    <div class="img-info-list">
+        <ul class="list-info">
+            {{#if result.owner.realname}}
+                <li class="list-item">Owner's real name: {{result.owner.realname}}</li>
+            {{/if}}
+            <li class="list-item">Owner's username: {{result.owner.username}}</li>
+            <li class="list-item">Date taken: {{result.dates.taken}}</li>
+            {{#if result.location.country}}
+                <li class="list-item">
+                    Location: {{result.location.country._content}} {{result.location.region._content}} {{result.location.locality._content}}</li>
+            {{/if}}
+            {{#if result.comments.content}}
+                <li class="list-item">Comments: {{result.comments.content}}</li>
+            {{/if}}
+            {{#if result.title._content}}
+                <li class="list-item">Title: {{result.title._content}}</li>
+            {{/if}}
+            <li class="list-item">URL: <a href="{{result.urls.url.0._content}}">{{result.urls.url.0._content}}</a></li>
+            {{#if result.tags.tag}}
+                <li class="list-item">Таgs: {{# each result.tags.tag }} {{this._content}} {{/each}}</li>
+            {{/if}}
+            {{#if result.description._content}}
+                <li class="list-item">Description: {{{result.description._content}}}</li>
+            {{/if}}
+        </ul>
+    </div>
 </div>

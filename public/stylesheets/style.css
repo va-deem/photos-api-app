@@ -82,3 +82,14 @@ main {
 .form-control {
   margin-bottom: 10px;
 }
+
+.form-control:first-child {
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.index-text {
+  font-weight: bold;
+  text-transform: uppercase;
+
+}
