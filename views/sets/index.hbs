@@ -1,41 +1,43 @@
 <div class="nav">
 <div class="logo"><a href="/"><img src="/images/logo.png" alt=""></a></div>
-<form class="form-inline" name="tagForm" id="choice-form" method='post' action="/sets">
+<form class="form-group" name="tagForm" id="choice-form" method='post' action="/sets">
     <div class="form-group mb-2">
-    <div class="form-group mx-sm-3 mb-2">
-        <label for="inputChoice" class="sr-only">Tag</label>
-        <input type="text" class="form-control" id="inputChoice" name="tag" placeholder="Enter a tag" required>
+        <input type="text" class="form-control" id="inputChoice" name="tag" placeholder="Photos by tag">
+        <input type="text" class="form-control" id="inputUser" name="username" placeholder="Photos by username">
+    <button type="submit" class="btn btn-primary btn-block" id="inputChoiceBtn">Show</button>
     </div>
-    <button type="submit" class="btn btn-primary mb-2" id="inputChoiceBtn">Show</button>
-    </div>
-
+<!--    <div class="form-group mb-2">-->
+<!--        <button type="submit" class="btn btn-primary btn-block" id="inputUserBtn">Show</button>-->
+<!--    </div>-->
 </form>
 
 
 
 
-<form class="form-inline" name="cityForm" id="choice-form" method='post' action="/sets/">
-    <div class="form-group mb-2">
-        <div class="form-group mx-sm-3 mb-2">
-            <label for="inputChoice" class="sr-only">Tag</label>
-            <input type="text" class="form-control" id="inputChoice" name="city" placeholder="Enter a city" required>
-        </div>
-        <button type="submit" class="btn btn-primary mb-2" id="inputChoiceBtn">Show</button>
-    </div>
-</form>
+<!--<form class="form-group" name="tagForm" id="user-form" method='post' action="/sets">-->
+<!--    <div class="form-group mb-2">-->
+<!--        <input type="text" class="form-control" id="inputUser" name="user" placeholder="Enter username" required>-->
+<!--        <button type="submit" class="btn btn-primary btn-block" id="inputUserBtn">Show</button>-->
+<!--    </div>-->
+<!--</form>-->
 
 
 
-<button class="btn btn-outline-info btn-block" id="getRecentBtn">Get recent photos</button>
-<button class="btn btn-outline-info btn-block">Get recent photos</button>
-<button class="btn btn-outline-info btn-block">Get recent photos</button>
-<button class="btn btn-outline-info btn-block">Get recent photos</button>
-<button class="btn btn-outline-info btn-block">Get recent photos</button>
-<button class="btn btn-outline-info btn-block">Get recent photos</button>
+<button class="btn btn-outline-info btn-block" id="getRecentBtn">Recent photos</button>
+<!--<button class="btn btn-outline-info btn-block" id="getPopularBtn">Popular photos</button>-->
+<!--<button class="btn btn-outline-info btn-block">Get random photo</button>-->
+<!--<button class="btn btn-outline-info btn-block">Get recent photos</button>-->
+<!--<button class="btn btn-outline-info btn-block">Get recent photos</button>-->
+<!--<button class="btn btn-outline-info btn-block">Get recent photos</button>-->
 
 </div>
 <div class="container">
+    {{#if pictures}}
+        {{{paginateHelper pagination}}}
 {{#each pictures}}
     <div class="square-img"><img src="{{this.url}}" alt="" id="{{this.id}}"></div>
 {{/each}}
+    {{else}}
+        <img src="/images/photo.png" alt="">
+    {{/if}}
 </div>
