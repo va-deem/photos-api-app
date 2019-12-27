@@ -28,7 +28,7 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  flex-wrap: nowrap;
+  /*flex-wrap: nowrap;*/
 }
 
 #choice-form,
@@ -42,7 +42,7 @@ main {
 
 .logo {
   align-items: flex-start;
-  margin-left: 10px;
+  margin-left: 8px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
